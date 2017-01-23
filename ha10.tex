@@ -164,7 +164,7 @@ Aus der Vorlesung wird nicht ganz Klar ob der CFG den Code enthalten sollte oder
           (2) edge                   node {} (5)
           (2) edge                   node {} (6)
           (3) edge 		     node {} (7)
-          (4) edge 		     node {} (7)
+          (4) edge 		     node {} (5)
           (5) edge 		     node {} (7)
           (6) edge 		     node {} (7);
  \end{tikzpicture}
@@ -174,7 +174,7 @@ Aus der Vorlesung wird nicht ganz Klar ob der CFG den Code enthalten sollte oder
 \newpage
 \section*{Aufgabe 2}
 \begin{lstlisting}
-void Funktion(bool a,bool b){
+void Funktion(bool a,bool b){ // might be global variables too
   int y=0;
   if(a){
     y+=2;
@@ -184,27 +184,30 @@ void Funktion(bool a,bool b){
   if(!b){
     y-=1;
   }
-  return; //vermutlich "return y;" aber hier nicht ersichtlich
+  return; // Kein return value, diese werden immer angegeben!
 }
 \end{lstlisting}
 
 \newpage
 \section*{Aufgabe 3}
 
+Die Diskusion ist heir wichtig!
+
 \subsection*{1.}
-Nein, es könnte sich z.B. um andere Variablentypen handeln. Die Max funktion könnte genauso eine min Funktion sein.
+Eigentlich ja, aber Nein, wenn z.B. die Fuktion mit anderen Variablentypen Implementierbar ist (für eine Sprache wie C).
 \subsection*{2.}
-Nein, die exakte Implementierung kann anders sein und somit auch der Ablauf in der Maschiene. Ein Einfaches Beispiel ist:
-\begin{lstlisting}
-y+=x
-\end{lstlisting}
-und
-\begin{lstlisting}
-y=y+x
-\end{lstlisting}
-Der Code hat die selbe Bedeutung ist aber nicht identisch und wird bei mangelnder Compiler Optimierung auch anders ausgeführt. Siehe auch 3.1.
-\subsection*{3.}
 Ja.
+%Nein, die exakte Implementierung kann anders sein und somit auch der Ablauf in der Maschiene. Ein Einfaches Beispiel ist:
+%\begin{lstlisting}
+%y+=x
+%\end{lstlisting}
+%und
+%\begin{lstlisting}
+%y=y+x
+%\end{lstlisting}
+%Der Code hat die selbe Bedeutung ist aber nicht identisch und wird bei mangelnder Compiler Optimierung auch anders ausgeführt. Siehe auch 3.1.
+\subsection*{3.}
+Es muss nicht der Fall sein. Sie könnten das selbe Ergebnsis auf unterschiedliche Weise Produzieren. (Nein)
 \subsection*{4.}
 Ja.
 

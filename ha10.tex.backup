@@ -77,6 +77,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Aufgabe 1}
 
+Aus der Vorlesung wird nicht ganz Klar ob der CFG den Code enthalten sollte oder nicht. Ich habe mich daher an der Formatierung auf dem Aufgabenblatt orientiert mit eienr erweiterung um return Values darzustellen. 
 
 \subsection*{max}
   \begin{tikzpicture}[%
@@ -163,7 +164,7 @@
           (2) edge                   node {} (5)
           (2) edge                   node {} (6)
           (3) edge 		     node {} (7)
-          (4) edge 		     node {} (7)
+          (4) edge 		     node {} (5)
           (5) edge 		     node {} (7)
           (6) edge 		     node {} (7);
  \end{tikzpicture}
@@ -173,7 +174,7 @@
 \newpage
 \section*{Aufgabe 2}
 \begin{lstlisting}
-void Funktion(bool a,bool b){
+void Funktion(bool a,bool b){ // might be global variables too
   int y=0;
   if(a){
     y+=2;
@@ -183,15 +184,17 @@ void Funktion(bool a,bool b){
   if(!b){
     y-=1;
   }
-  return; //vermutlich "return y;" aber hier nicht ersichtlich
+  return; // Kein return value, diese werden immer angegeben!
 }
 \end{lstlisting}
 
 \newpage
 \section*{Aufgabe 3}
 
+Die Diskusion ist heir wichtig!
+
 \subsection*{1.}
-Nein, es könnte sich z.B. um andere Variablentypen handeln.
+Nein, es könnte sich z.B. um andere Variablentypen der übergebenen Variablen handeln. Die Max funktion könnte genauso eine min Funktion sein.
 \subsection*{2.}
 Nein, die exakte Implementierung kann anders sein und somit auch der Ablauf in der Maschiene. Ein Einfaches Beispiel ist:
 \begin{lstlisting}
@@ -201,11 +204,11 @@ und
 \begin{lstlisting}
 y=y+x
 \end{lstlisting}
-Der Code hat die selbe Bedeutung ist aber nicht identisch und wird bei mangelnder Compiler Optimierung auch anders ausgeführt.
+Der Code hat die selbe Bedeutung ist aber nicht identisch und wird bei mangelnder Compiler Optimierung auch anders ausgeführt. Siehe auch 3.1.
 \subsection*{3.}
 Ja.
 \subsection*{4.}
-
+Ja.
 
 
 \end{document}
